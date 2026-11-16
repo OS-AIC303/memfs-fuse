@@ -4,18 +4,22 @@
 // Simple lock interface.
 void mutex_init(struct mutex *lock)
 {
+  pthread_mutex_init(&(m->lock), NULL);
 }
 
 void mutex_lock(struct mutex *lock)
 {
+  pthread_mutex_lock(&(m->lock), NULL);
 }
 
 void mutex_unlock(struct mutex *lock)
 {
+  pthread_mutex_unlock(&(m->lock), NULL);
 }
 
 void mutex_destroy(struct mutex *lock)
 {
+  pthread_mutex_destroy(&(m->lock), NULL);
 }
 
 // Read-write lock interface.
